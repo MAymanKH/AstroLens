@@ -93,7 +93,7 @@ class _ChatPageState extends State<ChatPage> {
     try {
       // API endpoint - using your deployed domain
       final apiUrl =
-          'https://astrolens.mohamedayman.org/chat?message=${Uri.encodeComponent(userMessage)}';
+          'https://astrolens.mohamedayman.net/chat?message=${Uri.encodeComponent(userMessage)}';
 
       final response = await http
           .get(Uri.parse(apiUrl), headers: {'Content-Type': 'application/json'})

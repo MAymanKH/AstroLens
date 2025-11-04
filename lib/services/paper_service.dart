@@ -71,7 +71,7 @@ class PaperService {
     try {
       // Construct the API URL with proper query parameter (use HTTP as requested)
       final apiUrl = Uri.parse(
-        'https://astrolens.mohamedayman.org/summarize-get',
+        'https://astrolens.mohamedayman.net/summarize-get',
       ).replace(queryParameters: {'url': paperUrl});
 
       print('DEBUG: Calling API with URL: $apiUrl');

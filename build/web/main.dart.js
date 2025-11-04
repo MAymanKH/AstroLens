@@ -7328,7 +7328,7 @@ aG9(a4){var s=0,r=A.S(t.n6),q,p=2,o=[],n=[],m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a
 var $async$a6Q=A.O(function(a5,a6){if(a5===1){o.push(a6)
 s=p}while(true)switch(s){case 0:p=4
 h=t.N
-m=A.dU("https://astrolens.mohamedayman.org/summarize-get",0,null).V7(A.a_(["url",a4],h,t.z))
+m=A.dU("https://astrolens.mohamedayman.net/summarize-get",0,null).V7(A.a_(["url",a4],h,t.z))
 A.v5("DEBUG: Calling API with URL: "+A.k(m))
 A.azv()
 g=A.c([],t.O)
@@ -38964,7 +38964,7 @@ vk(a){return this.a1L(a)},
 a1L(a){var s=0,r=A.S(t.ey),q,p=2,o=[],n,m,l,k,j,i
 var $async$vk=A.O(function(b,c){if(b===1){o.push(c)
 s=p}while(true)switch(s){case 0:p=4
-n="https://astrolens.mohamedayman.org/chat?message="+A.Ez(2,a,B.a_,!1)
+n="https://astrolens.mohamedayman.net/chat?message="+A.Ez(2,a,B.a_,!1)
 k=t.N
 s=7
 return A.U(A.aMY(A.dU(n,0,null),A.a_(["Content-Type","application/json"],k,k)).zP(B.El),$async$vk)
