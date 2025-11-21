@@ -26,7 +26,7 @@ def initialize_ai():
     
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.0-flash-exp')
+        model = genai.GenerativeModel('gemini-2.0-flash-lite')
         return model
     except Exception as e:
         print(f"Error initializing AI model: {e}")
