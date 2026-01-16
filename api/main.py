@@ -20,13 +20,17 @@ load_dotenv()
 def initialize_ai():
     """Initialize the Google Generative AI model."""
     api_key = os.getenv('GOOGLE_API_KEY')
+    google_model = os.getenv('GOOGLE_MODEL')
     if not api_key:
         print("Warning: GOOGLE_API_KEY environment variable not set. AI features will be disabled.")
+        return None
+    elif not google_model:
+        print("Warning: GOOGLE_MODEL environment variable not set. AI features will be disabled.")
         return None
     
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.0-flash-lite')
+        model = genai.GenerativeModel(google_model)
         return model
     except Exception as e:
         print(f"Error initializing AI model: {e}")
@@ -983,4 +987,5 @@ async def health_check():
     return {"status": "healthy", "service": "paper-summarizer-api"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=9000)
+    port = int(os.getenv('PORT', 9000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
